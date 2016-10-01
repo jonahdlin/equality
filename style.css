@@ -1,0 +1,285 @@
+/*------------------------------------
+Page layout
+------------------------------------*/
+
+* {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	background-image: url("white_wall_hash.png");
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.outerMainContentContainer {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+	flex-flow: row;
+	justify-content: center;
+}
+
+.mainContentContainer {
+	width: 100vmin;
+	height: 100vmin;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	overflow: hidden;
+
+	-webkit-transition: all 0.2s linear 0s;
+	-moz-transition: all 0.2s linear 0s;
+	-o-transition: all 0.2s linear 0s;
+	transition: all 0.2s linear 0s;
+}
+
+.optionsContainer {
+	min-width: 35vmin;
+	height: 100%;
+	position: fixed;
+	display: flex;
+	flex-flow: row;
+}
+
+/*------------------------------------
+Options
+------------------------------------*/
+
+.options {
+	width: 90%;
+	height: 100%;
+	background-color: green;
+/*	display: none;*/
+}
+
+.optionCard {
+	width: 96%;
+	height: 19.2%;
+	margin: 2%;
+	box-shadow: 1px 1px 1px;
+	background-image: url("bright_squares.png");
+
+	display: flex;
+	flex-flow: column;
+}
+
+.optionTitle {
+	align-self: flex-start;
+	display: flex;
+	justify-content: center;
+	padding: 5%;
+	font-size: 2vw;
+	height: 4vw;
+	width: 100%;
+}
+
+.difficultyOption {
+	height: calc(50% - 2vw);
+	margin: 5px;
+	display: flex;
+	justify-content: center;
+	background-color: #A1D1A2;
+}
+
+.innerText {
+	align-self: center;
+}
+
+.naviconContainer {
+	align-self: flex-start;
+	display: flex;
+	justify-content: center;
+}
+
+.navicon {
+	align-self: center;
+	margin: .5em;
+	width: 100%;
+	height: 100%;
+	opacity: 0.7;
+
+	-webkit-transition: all 0.1s ease 0s;
+	-moz-transition: all 0.1s ease 0s;
+	-o-transition: all 0.1s ease 0s;
+	transition: all 0.1s ease 0s;
+}
+
+.navicon:hover {
+	opacity: 0.5;
+	transform: scale(1.1);
+}
+
+.navicon:active {
+	transform: scale(0.9);
+}
+
+/*------------------------------------
+Title and nontitle
+------------------------------------*/
+
+.title {
+	align-self: center;
+	height: 20%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.innerTitle {
+	align-self: center;
+	font-size: 7vmin;
+}
+
+.nonTitle {
+	height: 80%;
+	width: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+
+/*------------------------------------
+Board
+------------------------------------*/
+
+.boardContainer {
+	align-self: center;
+	height: 75%;
+	width: 60%;
+
+	display: table;
+	table-layout: fixed;
+}
+
+.row {
+	display: table-row;
+	height: 20%;
+	width: 100%;
+	border: 1px solid black;
+}
+
+.cell {
+	display: table-cell;
+	min-width: calc(100% / 3);
+	vertical-align: middle;
+}
+
+.bubble {
+	width: 75%;
+	height: 75%;
+	margin: auto;
+	background-color: #D1D1D1;
+	display: flex;
+	justify-content: center;
+
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
+
+.number {
+	font-size: 5vmin;
+	align-self: center;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.bubble:hover {
+	opacity: 0.8;
+	cursor: crosshair;
+}
+
+/*------------------------------------
+Totals
+------------------------------------*/
+
+.totals {
+	align-self: center;
+	height: 25%;
+	width: 80%;
+	position: relative;
+}
+
+.blueTotal {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 30%;
+	height: 75%;
+	background-color: #53B3D4;
+	display: flex;
+	justify-content: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.infoBox {
+	height: 80%;
+	width: 40%;
+	left: 30%;
+	top: 0;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.levelBox {
+	height: 20%;
+	width: 40%;
+	left: 30%;
+	bottom: 0;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+}
+
+.innerLevelBox {
+	align-self: center;
+}
+
+.yellowTotal {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 30%;
+	height: 75%;
+	background-color: #DADE64;
+	display: flex;
+	justify-content: center;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+}
+
+.innerTotal {
+	font-size: 6vmin;
+	align-self: center;
+}
+
+.innerInfoBox {
+	font-size: 3vmin;
+	padding: 1em;
+	opacity: 0;
+	align-self: center;
+	text-align: center;
+
+	-webkit-transition: all 0.5s ease 0s;
+	-moz-transition: all 0.5s ease 0s;
+	-o-transition: all 0.5s ease 0s;
+	transition: all 0.5s ease 0s;
+}
